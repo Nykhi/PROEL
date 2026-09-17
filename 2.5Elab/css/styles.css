@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fdf8d8;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 70px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.css-logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #e63946;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 0 4px #ffb703;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 21px;
+  height: 21px;
+  background-color: #fdf8d8;
+  border-radius: 50%;
+}
+
+.logo-text h1 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #e63946;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.logo-text h1 span {
+  color: #ffb703;
+}
+
+.logo-text p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.css-logo-bell {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.css-logo-bell:hover {
+  transform: scale(1.1);
+}
+
+.bell-body {
+  width: 20px;
+  height: 18px;
+  border: 2.5px solid #ffb703;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.bell-top {
+  width: 4px;
+  height: 4px;
+  background-color: #ffb703;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 21px;
+}
+
+.bell-clapper {
+  width: 6px;
+  height: 4px;
+  background-color: #ffb703;
+  border-radius: 0 0 3px 3px;
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.truck-status-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.truck-btn {
+  flex: 1;
+  background-color: #fdf8d8;
+  border: 2px solid #000;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.truck-btn:hover {
+  transform: scale(1.03);
+}
+
+.status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.green { background-color: #2ec4b6; }
+.status-dot.red { background-color: #e63946; }
+.status-dot.black { background-color: #000; }
+
+.map-and-stops {
+  display: flex;
+  gap: 40px;
+}
+
+.map-section {
+  flex: 1.2;
+}
+
+.map-card {
+  width: 100%;
+  height: 200px;
+  background-color: #1a233a;
+  border: 2px solid #000;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-pin {
+  width: 20px;
+  height: 20px;
+  background-color: #e63946;
+  color: #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-a { top: 80px; left: 50%; }
+.pin-b { top: 90px; left: 55%; }
+.pin-c { top: 60px; left: 53%; }
+
+.rating-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.rate-item {
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 48%;
+}
+
+.icon-location {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.icon-truck {
+  width: 25px;
+  height: 14px;
+  background-color: #000;
+  position: relative;
+  border-radius: 2px;
+}
+
+.truck-cab {
+  width: 8px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  right: -6px;
+  bottom: 0;
+  border-radius: 0 4px 0 0;
+}
+
+.truck-wheel {
+  width: 6px;
+  height: 6px;
+  background-color: #fdf8d8;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+}
+
+.w1 { left: 3px; }
+.w2 { right: 1px; }
+
+.stops-section {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.stops-section h2 {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.stop-btn {
+  width: 100%;
+  background-color: #fdf8d8;
+  border: 2px solid #000;
+  border-radius: 30px;
+  padding: 12px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.stop-btn:hover {
+  background-color: #f3e9a9;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fdf8d8;
+  border-top: 2px solid #e0d8ab;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nav-item.active {
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  margin-bottom: 3px;
+}
+
+.map-icon { border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+.heart-icon { transform: rotate(45deg); border-radius: 3px; }
+.user-icon { border-radius: 50%; }
